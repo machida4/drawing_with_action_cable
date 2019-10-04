@@ -1,6 +1,6 @@
 //= require cable
 //= require_self
-//= require_tree
+//= require_tree .
 
 this.App = {};
 
