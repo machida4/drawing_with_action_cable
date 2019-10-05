@@ -60,4 +60,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_cable.url = "ws://localhost:3000/cable"
+  config.web_console.whitelisted_ips = '0.0.0.0/0'
 end
