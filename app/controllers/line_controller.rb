@@ -3,13 +3,14 @@ class LineController < ApplicationController
     @number_of_connected_users = ActionCable.server.connections.length
   end
   
-  def show
+  def updateline
     ActionCable.server.broadcast 'lines',
-      fromx: params[:fromx],
-      fromy: params[:fromy],
-      tox: params[:tox],
-      toy: params[:toy],
-      color: params[:color]
+      lines_params
     head :ok
+  end
+
+  private
+  def lines_params
+    params.permit(:fromx, :fromy, :tox, :toy, :color)
   end
 end
