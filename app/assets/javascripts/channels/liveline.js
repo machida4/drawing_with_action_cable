@@ -86,3 +86,10 @@ function drawLine(fromx, fromy, tox, toy, color){
  ctx.lineTo(tox, toy);
  ctx.stroke();
 }
+
+function loadLineHistory(){
+  $.ajax({
+    method: "POST",
+    url: "/history"
+  });
+}

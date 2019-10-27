@@ -10,6 +10,14 @@ class LineController < ApplicationController
     Line.create! lines_params
   end
 
+  def history
+    Line.all.each do |line|
+      ActionCable.server.broadcast 'lines',
+          line
+        end
+      head :ok
+  end
+
   private
   def lines_params
     params.permit(:fromx, :fromy, :tox, :toy, :color)

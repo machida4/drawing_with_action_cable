@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   get "/", to: "line#index"
   post "/updateline", to: "line#updateline"
+  post "/history", to: "line#history"
 end
