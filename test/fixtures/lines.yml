@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fromx: 1
+  fromy: 1
+  tox: 1
+  toy: 1
+  color: MyString
+
+two:
+  fromx: 1
+  fromy: 1
+  tox: 1
+  toy: 1
+  color: MyString
