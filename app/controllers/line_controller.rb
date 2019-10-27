@@ -7,6 +7,7 @@ class LineController < ApplicationController
     ActionCable.server.broadcast 'lines',
       lines_params
     head :ok
+    Line.create! lines_params
   end
 
   private
